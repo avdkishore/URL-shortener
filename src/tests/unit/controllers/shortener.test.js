@@ -4,6 +4,8 @@ import qs from 'querystring';
 chai.should();
 
 describe('shorten API', () => {
+	let shortenUrl;
+
 	it('should return 400 if no url is provided', async () => {
 		const res = await request.get('/v1/shorten');
 
@@ -31,9 +33,10 @@ describe('shorten API', () => {
 
 		const res = await request.get(`/v1/shorten?${query}`);
 
-		res.statusCode.should.equal(201);
+		res.statusCode.should.equal(200);
 		res.body.should.be.an('object').with.keys(['shortenUrl']);
-		res.body.shortenUrl.should.be.a('string').with.length(20);
+		res.body.shortenUrl.should.be.a('string');
+		shortenUrl = res.body.shortenUrl;
 	});
 
 	it('should return 200 and shortenUrl', async () => {
@@ -45,6 +48,8 @@ describe('shorten API', () => {
 
 		res.statusCode.should.equal(200);
 		res.body.should.be.an('object').with.keys(['shortenUrl']);
-		res.body.shortenUrl.should.be.a('string').with.length(20);
+		res.body.shortenUrl.should.be.a('string');
+
+		res.body.shortenUrl.should.equal(shortenUrl);
 	});
 });

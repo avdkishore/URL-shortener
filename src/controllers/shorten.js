@@ -28,10 +28,10 @@ export default {
 			return res.status(200).json({ shortenUrl });
 		}
 
-		const id = nanoid();
+		const id = nanoid(10);
 		const shortenUrl = `${config.BASE_URL}/${id}`;
 		urlMap[url] = id;
 
-		return res.status(201).json({ shortenUrl });
+		return res.status(200).json({ shortenUrl });
 	}
 };
