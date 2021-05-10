@@ -5,5 +5,5 @@
  */
 
 export default {
-  find: (_, res) => res.status(200).json({ message: 'All is well!!' })
+	find: (_, res) => res.status(200).json({ message: 'All is well!!' })
 };

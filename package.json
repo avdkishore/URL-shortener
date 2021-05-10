@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
-    "test": "mocha --require @babel/register 'src/**/*.test.js'"
+    "test": "mocha --require @babel/register 'src/**/*.test.js'",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,6 +20,7 @@
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.14.1",
     "chai": "^4.3.4",
+    "eslint": "^7.26.0",
     "mocha": "^8.4.0",
     "nodemon": "^2.0.7",
     "supertest": "^6.1.3"
