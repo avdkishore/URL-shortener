@@ -2,6 +2,10 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "main": "src/server.js",
+  "author": {
+    "name": "Kishore",
+    "email": "avdkishore@gmail.com"
+  },
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
