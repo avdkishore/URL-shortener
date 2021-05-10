@@ -28,4 +28,4 @@ app.use((error, req, res) => {
   });
 });
 
-app.listen(config.PORT, () => console.log(`App Server listening on port ${config.PORT}`));
+export default app;
