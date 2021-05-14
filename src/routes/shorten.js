@@ -6,5 +6,11 @@ export default [
 		path: 'shorten',
 		method: 'get',
 		action: controllers.shorten.find
+	},
+	{
+		version: 'v1',
+		path: 'retrieve',
+		method: 'get',
+		action: controllers.shorten.retrieve
 	}
 ];

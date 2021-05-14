@@ -1,4 +1,4 @@
 export default {
 	PORT: process.env.PORT || 8000,
-	BASE_URL: process.env.BASE_URL || 'http://localhost'
+	BASE_URL: process.env.BASE_URL || 'http://localhost:8000'
 };
